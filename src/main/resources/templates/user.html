@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" href="/css/bootstrap.css"/>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Enabled</th>
+        <th scope="col">Name</th>
+        <th scope="col">City</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+
+        <td><a th:text="${user.id}"></a></td>
+        <td><a th:text="${user.enabled}"></a></td>
+        <td><a th:text="${user.username}"></a></td>
+        <td><a th:text="${user.city}"></a></td>
+        <td><a th:text="${user.phone}"></a></td>
+        <td><a th:text="${user.email}"></a></td>
+
+    </tbody>
+</table>
+
+<form th:action="@{/logout}" th:method="POST">
+    <input type="submit" value="Logout">
+</form>
+</body>
+</html>

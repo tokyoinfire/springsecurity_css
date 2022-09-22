@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.kata.spring.boot_security.demo.entity.User;
 import ru.kata.spring.boot_security.demo.repository.RoleRepository;
+import ru.kata.spring.boot_security.demo.service.UserService;
 import ru.kata.spring.boot_security.demo.service.UserServiceImp;
 
 import java.security.Principal;
@@ -14,7 +15,7 @@ import java.security.Principal;
 @RequestMapping("/admin")
 public class AdminController {
 
-    private final UserServiceImp userService;
+    private final UserService userService;
     private final RoleRepository roleRepository;
 
     @Autowired

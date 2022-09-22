@@ -15,8 +15,9 @@ import java.util.List;
 public class User implements UserDetails {
 
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "enabled")
     private boolean enabled;
@@ -58,7 +59,7 @@ public class User implements UserDetails {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
